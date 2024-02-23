@@ -18,7 +18,7 @@ Explore residents of each planet and their characteristics.
 Installation
 To run this project locally, follow these steps:
 
-Clone the repository to your local machine:git clone https://github.com/your-username/star-wars-planets-directory.git
+Clone the repository to your local machine:git clone https://github.com/vasibhat/star-wars-planets-directory.git
 
 Navigate to the project directory:cd star-wars-planets-directory
 Install dependencies using npm:npm install
