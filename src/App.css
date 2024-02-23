@@ -1,38 +1,157 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+body {
+  font-family: 'Anta', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../public/Image/Cover.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  height: 35px; 
+  border-radius: 8px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 1200px;
 }
 
-@keyframes App-logo-spin {
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden; 
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40) 1s forwards, blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 100%;
   }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #fff;
+  }
+}
+
+.planets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.planet-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  max-height: 400px; 
+  overflow-y: auto; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  background-image: linear-gradient(135deg, #007bff62, #ae00ff86);
+}
+
+.planet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.planet-card h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.planet-card p {
+  color: #333;
+  margin: 10px 0;
+}
+
+.planet-card ul {
+  padding-left: 0;
+  margin-top: 15px;
+  list-style: none;
+  margin-bottom: 8px;
+  color: #666;
+  font-style: italic;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  font-family: 'Anta', sans-serif;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
